@@ -1,0 +1,4 @@
+.python
+.venv
+.mypy_cache
+*.egg-info

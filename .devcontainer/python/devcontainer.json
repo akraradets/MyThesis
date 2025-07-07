@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker-compose
+{
+	"name": "python",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "python",
+	"overrideCommand": true,
+	"workspaceFolder": "/Projects/python",
+    "remoteUser": "ubuntu",
+    "updateRemoteUserUID": true,
+	"shutdownAction": "stopCompose",
+	// Use this environment variable if you need to bind mount your local source code into a new container.
+	"remoteEnv": {
+		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-python.mypy-type-checker",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "bash /Projects/.devcontainer/bki/setup.sh "
+}
